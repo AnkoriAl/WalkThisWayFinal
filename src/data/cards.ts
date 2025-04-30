@@ -13,7 +13,8 @@ export const cards: Card[] = [
 
 [Take‑away]  To reach Jerusalem on foot is to merge body, memory, and landscape.  The stones remember every diaspora (scattering) and every homecoming.  When the skyline finally reveals the golden Dome of the Rock and the Western Wall, you feel the city “rewrite” you—transforming tourist into pilgrim, present into layered past.`,
     interactiveType: 'map',
-    visualHook: 'https://images.pexels.com/photos/2397648/pexels-photo-2397648.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    visualHook: 'https://tarbutil.cet.ac.il/wp-content/uploads/2019/07/to-beit-hamikdash1.jpeg',
+    visualDescription: 'A winding footpath climbs a sunlit hill toward Jerusalem, flanked by olive trees and ancient stone walls.',
   },
   {
     slug: 'salt',
@@ -27,7 +28,8 @@ export const cards: Card[] = [
 
 [Theory]  De Certeau would call Gandhi’s action a “tactic”—an everyday gesture that outwits institutional “strategy.”  Debord’s concept of a sudden shift in urban mood (“the moment when the ambiance changes”) arrived the instant salt laws evaporated.  Grain by grain, the marchers rewrote imperial authority—and reminded every future walker that liberation can start with something as small as a crystal of NaCl.`,
     interactiveType: 'scroller',
-    visualHook: 'https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    visualHook: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Salt_March.jpg/164px-Salt_March.jpg',
+    visualDescription: 'Mahatma Gandhi bends down to collect a fistful of sea salt as crowds follow along the coast.',
   },
   {
     slug: 'birmingham',
@@ -41,7 +43,8 @@ export const cards: Card[] = [
 
 [Take‑away]  From train window reflections, a Jewish traveler might hear echoes of Moses telling Pharaoh, “Let My People Go.”  The Civil Rights Movement and Exodus share narrative DNA: oppressive power, a dissenting voice, a journey toward promised freedom.  The rails, like Hebrew scripture, insist that the pursuit of justice must stay in motion.`,
     interactiveType: 'timeline',
-    visualHook: 'https://images.pexels.com/photos/2537537/pexels-photo-2537537.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    visualHook: 'https://digital.archives.alabama.gov/digital/api/singleitem/image/photo/300/default.jpg',
+    visualDescription: 'Civil rights marchers cross the Edmund Pettus Bridge under cloudy skies, arms linked in defiance.',
   },
   {
     slug: 'paris',
@@ -55,7 +58,8 @@ export const cards: Card[] = [
 
 [Everyday Balancing Act]  Each step tests belonging: stride length 0.8 meters, vigilance 100 percent.  Pleasure (buttery pastry) and precaution (tallying exits) intertwine.  To walk Paris as a Jew is to conduct live historical research with your body, sensing where past prejudice still lingers and where new community thrives.`,
     interactiveType: 'hotspots',
-    visualHook: 'https://images.pexels.com/photos/2507025/pexels-photo-2507025.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    visualHook: 'https://jewish-paris-tours.com/wp-content/uploads/paris-nazi-jews-antisemitism-jewish-quarter-Paris-1945.jpg',
+    visualDescription: 'Cobbled Rue des Rosiers winds through Paris’s Jewish quarter, lined with bakeries and shuttered shops.',
   },
   {
     slug: 'poe',
@@ -69,7 +73,8 @@ export const cards: Card[] = [
 
 [Modern Echo]  Today Israel’s Ben‑Gurion Airport screens passengers with gait‑analysis cameras, showing how the watched can become watchers.  The question lingers: who controls the right to look?  Click “Reverse Chase” in the interactive map and the hunter becomes the hunted, proving that a gaze pursued long enough finally gazes back.`,
     interactiveType: 'cctv',
-    visualHook: 'https://images.pexels.com/photos/7735243/pexels-photo-7735243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    visualHook: 'https://images.stockcake.com/public/9/e/0/9e027b10-c163-4f6b-8be3-fd175b6111fc_large/mystical-foggy-alley-stockcake.jpg',
+    visualDescription: 'A narrow alley under gaslight fades into the fog—half London Gothic, half surveillance noir.',
   },
   {
     slug: 'rainyday',
@@ -83,6 +88,7 @@ export const cards: Card[] = [
 
 [Take‑away]  Walking these boulevards becomes urban archaeology done with soles instead of shovels.  Each step conjures a vanished lane, reminding us that progress often writes history in disappearing ink—even as rainwater makes the hidden lines reappear.`,
     interactiveType: 'slider',
-    visualHook: 'https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    visualHook: 'https://imgc.artprintimages.com/img/print/gustave-caillebotte-path-up-couple-walking-in-the-countryside-painting-by-gustave-caillebotte-1848-1894-19th-centu_u-l-q1r63mo0.jpg',
+    visualDescription: 'Couples huddle beneath umbrellas in a grand Haussmann boulevard, reflecting in puddles beneath Caillebotte skies.',
   },
 ];

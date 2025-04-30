@@ -40,13 +40,20 @@ const CardPage: React.FC = () => {
             <div className="lg:sticky lg:top-24 space-y-8">
               <div className="bg-white rounded-lg shadow-md p-6">
                 <h3 className="text-lg font-semibold mb-4">Anchor Source</h3>
-                <div className="aspect-video rounded-md overflow-hidden mb-4">
-                  <img 
-                    src={card.visualHook} 
-                    alt={card.title} 
+                <div className="aspect-video rounded-md overflow-hidden mb-2">
+                  <img
+                    src={card.visualHook}
+                    alt={card.visualDescription || card.title}
                     className="w-full h-full object-cover"
                   />
                 </div>
+
+                {card.visualDescription && (
+                  <p className="text-xs italic text-gray-600 mb-4">
+                    {card.visualDescription}
+                  </p>
+                )}
+
                 <p className="text-sm text-gray-600">
                   The journey explores connections between {card.title.toLowerCase()} and Jewish walking traditions.
                 </p>
@@ -144,7 +151,7 @@ const CardPage: React.FC = () => {
                 <div className="aspect-square relative">
                   <img 
                     src={card.visualHook} 
-                    alt={`Visual representation of ${card.title}`} 
+                    alt={card.visualDescription || `Visual representation of ${card.title}`}
                     className="w-full h-full object-cover transition-opacity duration-1000"
                     data-aos="fade-in"
                     data-aos-duration="1500"

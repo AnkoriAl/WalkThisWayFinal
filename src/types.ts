@@ -5,6 +5,8 @@ export interface Card {
   diaryText: string;
   interactiveType: string;
   visualHook: string;
+  /** Short alt-text / caption for the anchor image */
+  visualDescription?: string;
 }
 
 export interface TheorySection {
