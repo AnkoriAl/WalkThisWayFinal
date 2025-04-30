@@ -475,6 +475,41 @@ const renderMap = () => {
   /** CCTV --------------------------------------------------------------- */
   const CCTV: React.FC = () => {
     const { video } = ASSETS.cctv;
+    // ─── toggle between prerecorded CCTV feed and user's front camera ──
+    const [useCamera, setUseCamera] = useState(false);
+    const camRef = useRef<HTMLVideoElement | null>(null);
+    const videoRef = useRef<HTMLVideoElement | null>(null);
+
+    useEffect(() => {
+      if (!useCamera) return;
+
+      let stream: MediaStream;
+
+      navigator.mediaDevices
+        ?.getUserMedia({ video: { facingMode: 'user' } })
+        .then(s => {
+          stream = s;
+          if (camRef.current) camRef.current.srcObject = s;
+        })
+        .catch(err => {
+          console.error('Camera access denied', err);
+          setUseCamera(false);          // graceful fallback
+        });
+
+      return () => {
+        stream?.getTracks().forEach(t => t.stop());
+      };
+    }, [useCamera]);
+    // restart the looped video each time we leave camera mode
+    useEffect(() => {
+      if (useCamera) return;                // only run when switching *to* video
+      const vid = videoRef.current;
+      if (vid) {
+        vid.currentTime = 0;
+        vid.play().catch(() => {/* ignore browser autoplay blocks */});
+      }
+    }, [useCamera]);
+
     return (
       <section className="bg-[#f6f0e6] p-6 rounded-lg border border-[#cba95b]">
         <header className="flex justify-between items-center mb-4">
@@ -483,16 +518,28 @@ const renderMap = () => {
         </header>
 
         <div className="relative h-80 rounded overflow-hidden bg-black">
-          <video
-            src={video}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-full object-cover"
-          />
+          {/* live / prerecorded feed */}
+          {useCamera ? (
+            <video
+              ref={camRef}
+              autoPlay
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <video
+              ref={videoRef}
+              src={video}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          )}
 
-          {/* Overlay HUD */}
+          {/* overlay HUD */}
           <div className="absolute inset-0 bg-gray-900 bg-opacity-30 flex flex-col pointer-events-none select-none">
             <div className="bg-black bg-opacity-50 p-2 text-white text-xs flex justify-between">
               <span>CAM‑03</span>
@@ -503,6 +550,14 @@ const renderMap = () => {
               REC
             </div>
           </div>
+
+          {/* revert toggle */}
+          <button
+            onClick={() => setUseCamera(prev => !prev)}
+            className="absolute bottom-3 left-3 bg-white bg-opacity-80 px-2 py-1 rounded text-xs z-10"
+          >
+            {useCamera ? 'Exit' : 'Revert'}
+          </button>
         </div>
 
         <p className="mt-4 text-sm text-gray-600">
