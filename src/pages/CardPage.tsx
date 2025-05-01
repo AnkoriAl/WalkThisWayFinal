@@ -113,8 +113,8 @@ const CardPage: React.FC = () => {
                     Week Four weighs walking as contemplative ritual—Rousseau's Reveries, Solnit's "Mind at Three Miles an Hour," Ammons's "A Poem is a Walk." The Shabbat card's stillness-in-motion, weekly repetition, and embodied meditation echo that introspective tradition the week spotlights.</>
                   )}
                   {card.slug === 'letters' && (
-                    <>Week Two – Jan 27 "Homo Viator: Pilgrims and Pilgrimages"<br />
-                    Like Aliyah, this card stages a festival ascent to Jerusalem and turns every footstep into devotion. Week Two's pilgrimage lens—and its readings on Bunyan, world holy walks, and Solnit's pilgrimage chapter—offers the exact analytical toolkit for this mini-pilgrimage with a folded prayer in hand.</>
+                    <>Week Thirteen – April 22 "The Documented Walk"<br />
+                    This week explored how recording—through photography, video, text, or sound—alters a walk's meaning. We pair Long's grass incision, Nauman's perimeter performance, and Cardiff's riverside hair installation with Solnit's Las Vegas dérive to ask: does documentation deepen the journey or derail it?</>
                   )}
                 </p>
               </div>
@@ -216,17 +216,17 @@ const CardPage: React.FC = () => {
                   )}
                   {card.slug === 'letters' && (
                     <>
-                      <Link to="/theory#exile" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                      <Link to="/theory#solnit-vegas" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
                         <BookOpen size={16} className="mr-2" />
-                        <span>Solnit: Walking & Exile</span>
+                        <span>Solnit: Las Vegas walk</span>
                       </Link>
-                      <Link to="/theory#clark" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                      <Link to="/theory#certeau-sidewalk" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
                         <BookOpen size={16} className="mr-2" />
-                        <span>Clark: Footstep as Stanza</span>
+                        <span>de Certeau: "Walking in the City"</span>
                       </Link>
-                      <Link to="/theory#horowitz" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                      <Link to="/theory#debord-compass" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
                         <BookOpen size={16} className="mr-2" />
-                        <span>Horowitz: Attentive Walking</span>
+                        <span>Debord: Psychogeography & dérive</span>
                       </Link>
                     </>
                   )}
@@ -270,7 +270,9 @@ const CardPage: React.FC = () => {
                 data-aos="fade-up"
                 data-aos-delay="600"
               >
-                <InteractiveElement type={card.interactiveType} slug={card.slug} />
+                {card.slug !== 'letters' && (
+                  <InteractiveElement type={card.interactiveType} slug={card.slug} />
+                )}
               </div>
               
               <div className="flex justify-between items-center mt-12">
@@ -326,23 +328,23 @@ const CardPage: React.FC = () => {
                           <p className="text-sm text-gray-700 mb-2">
                             <strong>Why this scene?</strong> I wanted the reader to feel an uphill Jerusalem
                             pilgrimage through three time layers at once—Second‑Temple caravans,
-                            medieval scholars like Kalonymus ben Kalonymus, and today’s backpackers.
+                            medieval scholars like Kalonymus ben Kalonymus, and today's backpackers.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
                             <strong>Primary sources used:</strong> Torah commands for the
                             thrice‑yearly festivals (Ex 23 &amp; Dt 16) and Psalms 120‑134, the
-                            “Songs of Ascents” historically sung while climbing.
+                            "Songs of Ascents" historically sung while climbing.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Theoretical frame:</strong> Rebecca Solnit’s idea of a pilgrimage
-                            drawing an invisible “sacred map,” Guy Debord’s <em>dérive</em> (here
-                            tilted upward instead of sideways), and Michel de Certeau’s claim that
-                            walkers “write texts they cannot read.”
+                            <strong>Theoretical frame:</strong> Rebecca Solnit's idea of a pilgrimage
+                            drawing an invisible "sacred map," Guy Debord's <em>dérive</em> (here
+                            tilted upward instead of sideways), and Michel de Certeau's claim that
+                            walkers "write texts they cannot read."
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
                             <strong>Visual logic:</strong> The interactive map layers elevation data
-                            onto ancient caravan routes; the warm photo glow echoes Jerusalem’s
-                            nickname “City of Gold.”
+                            onto ancient caravan routes; the warm photo glow echoes Jerusalem's
+                            nickname "City of Gold."
                           </p>
                           <p className="text-sm text-gray-700">
                             <strong>Take‑away:</strong> By merging calf‑ache with covenant memory,
@@ -355,16 +357,16 @@ const CardPage: React.FC = () => {
                         <>
                           <h4 className="text-sm font-semibold mb-2">Making Of – Salt of the Covenant</h4>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Why this scene?</strong> I wanted to connect the embodied protest of Gandhi’s Salt March with the ritual salt on the Passover table, foregrounding how small grains can catalyze sweeping change.
+                            <strong>Why this scene?</strong> I wanted to connect the embodied protest of Gandhi's Salt March with the ritual salt on the Passover table, foregrounding how small grains can catalyze sweeping change.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Primary sources used:</strong> Gandhi’s own Salt March journals, Leviticus 2:13’s “salt of the covenant,” and Exodus 12–14’s liberation narrative.
+                            <strong>Primary sources used:</strong> Gandhi's own Salt March journals, Leviticus 2:13's "salt of the covenant," and Exodus 12–14's liberation narrative.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Theoretical frame:</strong> Rebecca Solnit’s idea of protest as punctuation in history, de Certeau’s “tactics” versus “strategy,” and Debord’s ambiance shift in revolutionary spaces.
+                            <strong>Theoretical frame:</strong> Rebecca Solnit's idea of protest as punctuation in history, de Certeau's "tactics" versus "strategy," and Debord's ambiance shift in revolutionary spaces.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Visual logic:</strong> The interactive scroller follows the Dandi shoreline, with granular salt overlays echoing both the march and the Seder’s tactile rituals.
+                            <strong>Visual logic:</strong> The interactive scroller follows the Dandi shoreline, with granular salt overlays echoing both the march and the Seder's tactile rituals.
                           </p>
                           <p className="text-sm text-gray-700">
                             <strong>Take-away:</strong> The card highlights how tasting salt at Passover is not just memory, but an act of resistance, linking Jewish ritual to global movements for justice.
@@ -375,13 +377,13 @@ const CardPage: React.FC = () => {
                         <>
                           <h4 className="text-sm font-semibold mb-2">Making Of – Letters on the Road</h4>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Why this scene?</strong> I wanted to trace the footsteps from King’s Birmingham Jail letter through Selma to contemporary protests, showing how the act of walking becomes a moral argument.
+                            <strong>Why this scene?</strong> I wanted to trace the footsteps from King's Birmingham Jail letter through Selma to contemporary protests, showing how the act of walking becomes a moral argument.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Primary sources used:</strong> Dr. King’s “Letter from Birmingham Jail,” Deuteronomy 16:20 (“Justice, justice shall you pursue”), and Amos 5:24’s call for justice to “roll down like waters.”
+                            <strong>Primary sources used:</strong> Dr. King's "Letter from Birmingham Jail," Deuteronomy 16:20 ("Justice, justice shall you pursue") and Amos 5:24's call for justice to "roll down like waters."
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Theoretical frame:</strong> Thoreau’s “Civil Disobedience,” Solnit’s walking as witness, and de Certeau and Debord’s concepts of moral mapping in urban space.
+                            <strong>Theoretical frame:</strong> Thoreau's "Civil Disobedience," Solnit's walking as witness, and de Certeau and Debord's concepts of moral mapping in urban space.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
                             <strong>Visual logic:</strong> The slider traces a timeline from Selma to Black Lives Matter, overlaying protest marches with biblical justice language.
@@ -395,13 +397,13 @@ const CardPage: React.FC = () => {
                         <>
                           <h4 className="text-sm font-semibold mb-2">Making Of – Bath of Multitudes</h4>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Why this scene?</strong> I aimed to immerse the reader in the layered Jewish life of Paris’s Marais, from Dreyfus to the present, revealing how walking the same streets can mean safety or peril depending on the era.
+                            <strong>Why this scene?</strong> I aimed to immerse the reader in the layered Jewish life of Paris's Marais, from Dreyfus to the present, revealing how walking the same streets can mean safety or peril depending on the era.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Primary sources used:</strong> Newspaper coverage of the Dreyfus Affair, Vel d’Hiv roundup testimonies, and Rue des Rosiers walking guides.
+                            <strong>Primary sources used:</strong> Newspaper coverage of the Dreyfus Affair, Vel d'Hiv roundup testimonies, and Rue des Rosiers walking guides.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Theoretical frame:</strong> de Certeau’s “pedestrian guerrilla” and Debord’s “Naked City” maps, showing how urban walking can resist or reveal power.
+                            <strong>Theoretical frame:</strong> de Certeau's "pedestrian guerrilla" and Debord's "Naked City" maps, showing how urban walking can resist or reveal power.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
                             <strong>Visual logic:</strong> Interactive hotspots let users explore bakeries, synagogues, and checkpoints, echoing the hidden and public faces of Jewish Paris.
@@ -415,13 +417,13 @@ const CardPage: React.FC = () => {
                         <>
                           <h4 className="text-sm font-semibold mb-2">Making Of – Eyes That Cannot Be Alone</h4>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Why this scene?</strong> I wanted to explore the tension of walking while watched, from Poe’s haunted crowds to the surveillance of Jews in medieval and modern Europe.
+                            <strong>Why this scene?</strong> I wanted to explore the tension of walking while watched, from Poe's haunted crowds to the surveillance of Jews in medieval and modern Europe.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Primary sources used:</strong> Poe’s “The Man of the Crowd,” England’s 1275 Statute of the Jewry, and Russian Pale of Settlement documents.
+                            <strong>Primary sources used:</strong> Poe's "The Man of the Crowd," England's 1275 Statute of the Jewry, and Russian Pale of Settlement documents.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Theoretical frame:</strong> de Certeau’s idea of walking as unreadable text versus the all-seeing eye of CCTV, and Debord’s psychogeography for “reverse chase.”
+                            <strong>Theoretical frame:</strong> de Certeau's idea of walking as unreadable text versus the all-seeing eye of CCTV, and Debord's psychogeography for "reverse chase."
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
                             <strong>Visual logic:</strong> The mock CCTV feed flips the watcher/watched dynamic, echoing both peddler and police perspectives.
@@ -473,21 +475,18 @@ const CardPage: React.FC = () => {
                       )}
                       {card.slug === 'letters' && (
                         <>
-                          <h4 className="text-sm font-semibold mb-2">Making Of – Letters on the Road</h4>
+                          <h4 className="text-sm font-semibold mb-2">Making Of – Chronicle in Footprints</h4>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Why this scene?</strong> I wanted to explore how walking with a letter can serve as a modern echo of ancient pilgrimage, transforming city streets into sacred routes.
+                            <strong>Why this scene?</strong> I chose a shoreline strewn with footprints to capture the tension between permanence and erasure. Each print marks a step taken, yet the next tide threatens to sweep it away—just as our documented walks preserve moments that might otherwise vanish.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Primary sources used:</strong> Deuteronomy 16:16, Psalms of Ascent (120-134), Talmudic references to aliyah l'regel, Bunyan's The Pilgrim's Progress, Clark's In Praise of Walking, Horowitz's On Looking.
+                            <strong>Primary sources used:</strong> Biblical exile narratives (Cain’s mark, the Wandering Jew), Rebecca Solnit’s reflections on memory in motion, Bruce Nauman’s looping performances, and Michel de Certeau’s tactics of everyday walking.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Theoretical frame:</strong> This card reads pilgrimage as literary and embodied practice, connecting the act of walking to prayer, letter-writing, and devotional ascent.
-                          </p>
-                          <p className="text-sm text-gray-700 mb-2">
-                            <strong>Visual logic:</strong> The scrollable map creates a sense of elevation, mimicking both the literal and spiritual ascent to Jerusalem.
+                            <strong>Theoretical frame:</strong> This card reads walking as both record and ritual. Debord’s psychogeographic dérive meets de Certeau’s tactical detour: every footprint is a micro-action that inscribes personal history onto a shifting landscape.
                           </p>
                           <p className="text-sm text-gray-700">
-                            <strong>Take-away:</strong> Pilgrimage need not span continents. Even a short walk, when paired with intention and text, can lift the walker upward—letter by letter, step by step.
+                            <strong>Take-away:</strong> Even transient steps leave a story. By documenting each print—photo, audio, note—we push back against oblivion and turn fleeting journeys into lasting testimonies.
                           </p>
                         </>
                       )}

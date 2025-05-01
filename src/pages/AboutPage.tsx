@@ -13,7 +13,7 @@ const AboutPage: React.FC = () => {
     'Rain on the Ghetto Umbrella': 'Week 9',
     'Eyes That Cannot Be Alone (Poe)': 'Week 11',
     'Shabbat Stride': 'Week 4',
-    'Letters on the Wall (Western Wall notes)': 'Week 2',
+    'Chronicle in Footprints': 'Week 13',
   };
 
   const courseMatrix = cards.map((card, index) => ({
