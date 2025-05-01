@@ -1,29 +1,19 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import HomePage from './pages/HomePage';
-import CardPage from './pages/CardPage';
-import TheoryPage from './pages/TheoryPage';
-import AboutPage from './pages/AboutPage';
-import WorksCitedPage from './pages/WorksCitedPage';
-import './index.css';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-// Update document title
-document.title = "Walking the Text: Jewish Steps through Solnit, Debord & de Certeau";
+function App() {
+  return (
+    <div style={{ padding: '2rem', color: 'black', fontFamily: 'sans-serif' }}>
+      <h1>Welcome to Walking the Text</h1>
+      <p>This is a live preview of your deployed site.</p>
+      <p>If you're seeing this, your Vite app has deployed correctly to GitHub Pages.</p>
+    </div>
+  );
+}
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path="/card/:slug" element={<CardPage />} />
-          <Route path="/theory" element={<TheoryPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/works" element={<WorksCitedPage />} />
-        </Route>
-      </Routes>
-    </Router>
-  </StrictMode>
+const root = ReactDOM.createRoot(document.getElementById('root')!);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );

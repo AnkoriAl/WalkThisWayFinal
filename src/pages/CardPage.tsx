@@ -273,8 +273,38 @@ const CardPage: React.FC = () => {
                 data-aos-delay="400"
               >
                 <p className="text-base text-gray-700 italic">
-                  The psychogeography of this space reveals hidden connections between physical movement and cultural memory. 
-                  As Debord suggests <Citation sourceId="debord" />, the emotional contours of a space can be mapped through intentional wandering.
+                  {card.slug === 'aliyah' && (
+                    <>The psychogeography of this space reveals hidden connections between physical movement and cultural memory. 
+                    As Debord suggests <Citation sourceId="debord" />, the emotional contours of a space can be mapped through intentional wandering.</>
+                  )}
+                  {card.slug === 'salt' && (
+                    <>The journey from Sabarmati to Dandi becomes a living text, each step a word in Gandhi's protest. 
+                    As Solnit writes <Citation sourceId="solnit" />, protest walking turns feet into punctuation marks against oppression.</>
+                  )}
+                  {card.slug === 'birmingham' && (
+                    <>The Civil Rights route becomes a moral map, where each street corner holds echoes of justice and resistance. 
+                    As de Certeau suggests <Citation sourceId="decerteau" />, walkers rewrite the city's grid with their footsteps.</>
+                  )}
+                  {card.slug === 'paris' && (
+                    <>The Jewish quarter's streets hold layers of history, from medieval alleys to modern boulevards. 
+                    As Debord's psychogeography shows <Citation sourceId="debord" />, each corner reveals a different era of Jewish life in Paris.</>
+                  )}
+                  {card.slug === 'poe' && (
+                    <>Surveillance transforms walking into a game of visibility and invisibility. 
+                    As de Certeau observes <Citation sourceId="decerteau" />, walkers write texts they cannot read, while watchers try to decode them.</>
+                  )}
+                  {card.slug === 'rainyday' && (
+                    <>Haussmann's boulevards and Caillebotte's umbrellas frame a story of urban transformation. 
+                    As Debord's Naked City suggests <Citation sourceId="debord" />, the emotional map of Paris shifts with each renovation.</>
+                  )}
+                  {card.slug === 'shabbat' && (
+                    <>The weekly walk to synagogue becomes a ritual of presence and community. 
+                    As Ammons suggests <Citation sourceId="ammons" />, each step unfolds like a line of poetry, connecting past and present.</>
+                  )}
+                  {card.slug === 'letters' && (
+                    <>The chronicle walk reveals Jerusalem's layered history, from Roman soldiers to modern pilgrims. 
+                    As Solnit writes <Citation sourceId="solnit" />, each footstep inscribes a new chapter in the city's ongoing story.</>
+                  )}
                 </p>
               </div>
               
