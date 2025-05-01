@@ -52,6 +52,15 @@ const HomePage: React.FC = () => {
           <QuickLinks />
         </div>
       </div>
+
+      {/* Credits Section */}
+      <div className="py-8 bg-[#1c2340] text-white">
+        <div className="max-w-[1440px] mx-auto px-4 text-center">
+          <p className="text-sm">
+            Created by Almog Ankori, Mitchell Rosenthal, Lev Gilbert, and Shaya Schwarz
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

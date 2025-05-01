@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { cards } from '../data/cards';
 import InteractiveElement from '../components/InteractiveElements';
 import Citation from '../components/Citation';
@@ -7,16 +7,29 @@ import { ChevronLeft, ChevronRight, BookOpen, Map, ScrollText, ChevronDown } fro
 
 const CardPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
+  const [showMakingOf, setShowMakingOf] = useState(true);
+  
   const card = cards.find(c => c.slug === slug);
   const cardIndex = cards.findIndex(c => c.slug === slug);
   const prevCard = cardIndex > 0 ? cards[cardIndex - 1] : cards[cards.length - 1];
   const nextCard = cardIndex < cards.length - 1 ? cards[cardIndex + 1] : cards[0];
   
-  const [showMakingOf, setShowMakingOf] = React.useState(false);
-  
   useEffect(() => {
     window.scrollTo(0, 0);
+    setIsLoading(false);
+    return () => {
+      // Cleanup function to reset state when component unmounts
+      setIsLoading(false);
+    };
   }, [slug]);
+  
+  const handleNavigation = (newSlug: string) => {
+    setIsLoading(true);
+    // Use navigate instead of Link to have more control over the transition
+    navigate(`/card/${newSlug}`);
+  };
   
   if (!card) {
     return (
@@ -33,6 +46,11 @@ const CardPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#f6f0e6]">
+      {isLoading && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#cba95b]"></div>
+        </div>
+      )}
       <div className="max-w-[1440px] mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Column 0 - Sticky sidebar */}
@@ -45,6 +63,10 @@ const CardPage: React.FC = () => {
                     src={card.visualHook}
                     alt={card.visualDescription || card.title}
                     className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = 'https://via.placeholder.com/400x225?text=Image+Not+Available';
+                    }}
                   />
                 </div>
 
@@ -252,21 +274,23 @@ const CardPage: React.FC = () => {
               </div>
               
               <div className="flex justify-between items-center mt-12">
-                <Link 
-                  to={`/card/${prevCard.slug}`}
+                <button 
+                  onClick={() => handleNavigation(prevCard.slug)}
                   className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors"
+                  disabled={isLoading}
                 >
                   <ChevronLeft size={20} className="mr-1" />
                   <span>Previous: {prevCard.title}</span>
-                </Link>
+                </button>
                 
-                <Link 
-                  to={`/card/${nextCard.slug}`}
+                <button 
+                  onClick={() => handleNavigation(nextCard.slug)}
                   className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors"
+                  disabled={isLoading}
                 >
                   <span>Next: {nextCard.title}</span>
                   <ChevronRight size={20} className="ml-1" />
-                </Link>
+                </button>
               </div>
             </div>
           </div>
@@ -290,7 +314,7 @@ const CardPage: React.FC = () => {
                     onClick={() => setShowMakingOf(!showMakingOf)}
                     className="text-sm text-[#1c2340] hover:text-[#cba95b] transition-colors flex items-center"
                   >
-                    {showMakingOf ? "Hide" : "Show"} Making-Of
+                    {showMakingOf ? "Hide Making-Of" : "Show Making-Of"}
                     <ChevronDown size={16} className={`ml-1 transform transition-transform ${showMakingOf ? 'rotate-180' : ''}`} />
                   </button>
                   

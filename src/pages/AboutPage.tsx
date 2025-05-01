@@ -4,16 +4,34 @@ import { cards } from '../data/cards';
 import { BookOpen } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
+  // Map each card title to the correct syllabus week & date
+  const weekMapping: Record<string, string> = {
+    'Aliyah, Not Allegory': 'Week 2',
+    'Salt of the Covenant': 'Week 5',
+    'Letters on the Road (Birmingham)': 'Week 5',
+    'Bath of Multitudes (Paris flâneur)': 'Week 10',
+    'Rain on the Ghetto Umbrella': 'Week 9',
+    'Eyes That Cannot Be Alone (Poe)': 'Week 11',
+    'Shabbat Stride': 'Week 4',
+    'Letters on the Wall (Western Wall notes)': 'Week 2',
+  };
+
   const courseMatrix = cards.map((card, index) => ({
     card: card.title,
-    week: index + 1,
+    week: weekMapping[card.title] || `Week ${index + 1}`,
     primary: `Walking & ${card.title.split(',')[0]}`,
-    theory: index === 0 ? 'Exile' : 
-           index === 1 ? 'Sacred Geography' :
-           index === 2 ? 'Tactics & Strategies' :
-           index === 3 ? 'Flâneur Concept' :
-           index === 4 ? 'Surveillance' :
-           'Psychogeography'
+    theory:
+      index === 0
+        ? 'Exile'
+        : index === 1
+        ? 'Sacred Geography'
+        : index === 2
+        ? 'Tactics & Strategies'
+        : index === 3
+        ? 'Flâneur Concept'
+        : index === 4
+        ? 'Surveillance'
+        : 'Psychogeography',
   }));
 
   return (

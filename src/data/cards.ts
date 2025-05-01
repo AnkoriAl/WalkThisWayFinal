@@ -103,7 +103,7 @@ export const cards: Card[] = [
 
 [Theory] This card draws on Ammons's A Poem is a Walk, with its claim that a walk unfolds like thought—not as a straight line, but as a meander through inner space. The Shabbat walk enacts this poetics of pause, threading communal identity through pedestrian ritual. The act of not driving becomes a form of cultural authorship, writing oneself into a rhythm older than asphalt.`,
     interactiveType: 'map',
-    visualHook: 'https://example.com/shabbat-walk.jpg',
+    visualHook: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Hasidic_Family_in_Street_-_Borough_Park_-_Hasidic_District_-_Brooklyn.jpg/960px-Hasidic_Family_in_Street_-_Borough_Park_-_Hasidic_District_-_Brooklyn.jpg',
     visualDescription: 'An Orthodox Jewish family walks to synagogue before sundown on Friday.',
   },
   {
@@ -118,7 +118,7 @@ export const cards: Card[] = [
 
 [Theory] As Thomas A. Clark writes in "In Praise of Walking," each footstep writes its own poem. The note-walk to the Wall materializes this verse: a physical text carried toward a textual wall. Horowitz's On Looking teaches us that city walking can become sacred through attentiveness. To carry a letter through Jerusalem is to walk through centuries of devotion—layered stone, prayer callouses, dust and hope. Each step is a stanza.`,
     interactiveType: 'scroller',
-    visualHook: 'https://example.com/western-wall-letter.jpg',
+    visualHook: 'https://s.france24.com/media/display/748516f4-1c3d-11f0-885a-005056a97e36/w:1280/p:16x9/00cd5547436274618a7689d11003e07234534ac7.jpg',
     visualDescription: 'A traveler approaches the Western Wall, carrying a handwritten prayer.',
   },
 ];
