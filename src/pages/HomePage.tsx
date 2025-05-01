@@ -24,7 +24,7 @@ const HomePage: React.FC = () => {
             Walking the Text
           </h1>
           <p className="text-xl text-white mb-8">
-            Six cards, endless footsteps
+            Eight cards, endless footsteps
           </p>
           <div className="animate-bounce mt-12">
             <ChevronDown size={32} className="text-white mx-auto" />

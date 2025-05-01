@@ -91,4 +91,34 @@ export const cards: Card[] = [
     visualHook: 'https://imgc.artprintimages.com/img/print/gustave-caillebotte-path-up-couple-walking-in-the-countryside-painting-by-gustave-caillebotte-1848-1894-19th-centu_u-l-q1r63mo0.jpg',
     visualDescription: 'Couples huddle beneath umbrellas in a grand Haussmann boulevard, reflecting in puddles beneath Caillebotte skies.',
   },
+  {
+    slug: 'shabbat',
+    title: 'Shabbat Stride',
+    emoji: '🌄',
+    diaryText: `[Overview] From Friday sundown to Saturday twilight, many observant Jews take to the sidewalks, walking to synagogue in quiet procession. These Shabbat walks, often modest in distance, represent a refusal of speed and technology, replacing cars with conversation, errands with presence. The rhythm of footfalls between home and sanctuary becomes its own ritual, anchoring a sacred time in a sacred motion. Unlike everyday walking, which Solnit describes as often goal-driven or distracted, the Shabbat walk insists on stillness-in-motion—a walking that is not for getting somewhere but for being somewhere.
+
+[Jewish Parallel] Shabbat commands rest, but not stasis. Exodus 16:29 states, "Let no man go out from his place on the seventh day," yet walking to synagogue is permitted—even encouraged—within one's community (a techum, or walking boundary). This embedded tension parallels the walker's paradox explored in Rousseau's Reveries of a Solitary Walker: movement as a means of inner quiet. The act of walking within limits recalls the Exodus journey paused in the desert: forward motion contained by divine boundaries.
+
+[Bringing Traditions Together] In course discussions of Thoreau's Walking and the peripatetic philosophers of ancient Greece, walking emerges as a practice of reflection. The Shabbat walk, too, opens a space for thinking without striving—a kind of embodied meditation. As in Solnit's Mind at Three Miles an Hour, thought and pace synchronize. The weekly repetition of the same walk from home to shul becomes a form of temporal wayfinding, linking generations of walkers along familiar routes.
+
+[Theory] This card draws on Ammons's A Poem is a Walk, with its claim that a walk unfolds like thought—not as a straight line, but as a meander through inner space. The Shabbat walk enacts this poetics of pause, threading communal identity through pedestrian ritual. The act of not driving becomes a form of cultural authorship, writing oneself into a rhythm older than asphalt.`,
+    interactiveType: 'map',
+    visualHook: 'https://example.com/shabbat-walk.jpg',
+    visualDescription: 'An Orthodox Jewish family walks to synagogue before sundown on Friday.',
+  },
+  {
+    slug: 'letters',
+    title: 'Letters on the Road',
+    emoji: '📜',
+    diaryText: `[Overview] Each year, thousands of Jews around the world walk to the Western Wall to place handwritten prayers between its stones. These letters—folded fragments of longing—are carried by foot, in pockets and palms, across Jerusalem's cobbled corridors. The act is physical and devotional: every step deepens the plea. While the note is deposited in silence, the walk is a conversation. It is a pilgrimage in miniature, echoing the ancient Israelites who ascended to Jerusalem three times a year (aliyah l'regel) on foot.
+
+[Jewish Parallel] In Jewish tradition, the walk to Jerusalem is itself a mitzvah. Deuteronomy 16:16 commands: "Three times a year shall all your males appear before the Lord your God in the place that He shall choose." The Talmud expands on this, narrating the communal rhythm of festival walking. The modern trek to the Kotel, letter in hand, renews this commandment in a quiet, personal key. Like the Psalms of Ascent (Psalms 120-134), the journey is as much inward as uphill.
+
+[Bringing Traditions Together] In our course, we explored pilgrimage as both destination and transformation. Bunyan's Pilgrim's Progress offers a Christian allegory of moral striving, but Jewish pilgrimage, too, charts an ethical geography. Walking with a note is not merely travel; it is testimony—a claim that presence matters. As with the psychogeographers of modern London or the Situationists' dérive, intention guides route. But here the aim is not to get lost, but to be found.
+
+[Theory] As Thomas A. Clark writes in "In Praise of Walking," each footstep writes its own poem. The note-walk to the Wall materializes this verse: a physical text carried toward a textual wall. Horowitz's On Looking teaches us that city walking can become sacred through attentiveness. To carry a letter through Jerusalem is to walk through centuries of devotion—layered stone, prayer callouses, dust and hope. Each step is a stanza.`,
+    interactiveType: 'scroller',
+    visualHook: 'https://example.com/western-wall-letter.jpg',
+    visualDescription: 'A traveler approaches the Western Wall, carrying a handwritten prayer.',
+  },
 ];

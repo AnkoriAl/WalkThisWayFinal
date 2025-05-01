@@ -62,25 +62,152 @@ const CardPage: React.FC = () => {
               <div className="bg-white rounded-lg shadow-md p-6">
                 <h3 className="text-lg font-semibold mb-4">Course Tie-In</h3>
                 <p className="text-sm text-gray-600">
-                  This card aligns with Week {cardIndex + 1} of the curriculum, exploring themes of walking, exile, and psychogeography.
+                  {card.slug === 'aliyah' && (
+                    <>Week Two – Jan 27 "Homo Viator: Pilgrims and Pilgrimages"<br />
+                    That class foregrounds ritual foot-journeys—from medieval Camino routes to Solnit's chapter on pilgrimage—framing walking as a sacred ascent. The Aliyah card mirrors the syllabus by treating the uphill trek to Jerusalem as theology in motion, exactly the kind of "pilgrimage logic" the week asks us to analyze.</>
+                  )}
+                  {card.slug === 'salt' && (
+                    <>Week Five – Feb 20 "On the March" (Student-led Class 4)<br />
+                    Week Five dissects political marching—Gandhi's Salt March is the headline example—showing how collective feet can topple empires. The card retells that very protest and layers on Solnit, Debord, and de Certeau, so it plugs straight into the syllabus's revolution-on-foot conversation.</>
+                  )}
+                  {card.slug === 'birmingham' && (
+                    <>Week Five – Feb 20 "On the March"<br />
+                    The same session pairs Gandhi with Dr. King and Rabbi Heschel; King's Letter from Birmingham Jail is required reading. Your card follows the syllabus script: justice pursued by walking rails and roads, legs that "pray," and Exodus resonances—exactly what the week's discussion of civil-rights marches covers.</>
+                  )}
+                  {card.slug === 'paris' && (
+                    <>Week Ten – Apr 1 "The Aesthetics of Urban Walking: The Flâneur"<br />
+                    Week Ten centers on Baudelaire's flâneur, Benjamin, and Solnit's "Walking in Paris." The card zooms in on Rue des Rosiers, antisemitism, and the flâneur's conditional anonymity—perfect for the syllabus theme of strolling as social x-ray.</>
+                  )}
+                  {card.slug === 'rainyday' && (
+                    <>Week Nine – Mar 27 "The 'Nature' of Urban Walking"<br />
+                    That lecture looks at Haussmannization, Caillebotte's Paris Street, Rainy Day, and de Certeau's notion of pedestrians "tactically" inscribing space. Your card literally centers on Caillebotte's canvas and Jewish footprints muddying Haussmann's boulevards—case-study material for Week Nine.</>
+                  )}
+                  {card.slug === 'poe' && (
+                    <>Week Eleven – Apr 17 "Surveillance, Mystery, Detection & Discovery"<br />
+                    The Poe story "The Man of the Crowd" anchors this class, which spirals into CCTV, gait biometrics, and Calle/Acconci stalking pieces. Your card updates Poe with modern surveillance tech, matching the week's exploration of who watches whom on the street.</>
+                  )}
+                  {card.slug === 'shabbat' && (
+                    <>Week Four – Feb 11 "The Romantic Walker is Born"<br />
+                    Week Four weighs walking as contemplative ritual—Rousseau's Reveries, Solnit's "Mind at Three Miles an Hour," Ammons's "A Poem is a Walk." The Shabbat card's stillness-in-motion, weekly repetition, and embodied meditation echo that introspective tradition the week spotlights.</>
+                  )}
+                  {card.slug === 'letters' && (
+                    <>Week Two – Jan 27 "Homo Viator: Pilgrims and Pilgrimages"<br />
+                    Like Aliyah, this card stages a festival ascent to Jerusalem and turns every footstep into devotion. Week Two's pilgrimage lens—and its readings on Bunyan, world holy walks, and Solnit's pilgrimage chapter—offers the exact analytical toolkit for this mini-pilgrimage with a folded prayer in hand.</>
+                  )}
                 </p>
               </div>
               
               <div className="bg-white rounded-lg shadow-md p-6">
                 <h3 className="text-lg font-semibold mb-4">Theory Links</h3>
                 <div className="space-y-3">
-                  <Link to="/theory#exile" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
-                    <BookOpen size={16} className="mr-2" />
-                    <span>Solnit: Walking & Exile</span>
-                  </Link>
-                  <Link to="/theory#psychogeography" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
-                    <Map size={16} className="mr-2" />
-                    <span>Debord: Psychogeography</span>
-                  </Link>
-                  <Link to="/theory#tactics" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
-                    <ScrollText size={16} className="mr-2" />
-                    <span>de Certeau: Tactics</span>
-                  </Link>
+                  {card.slug === 'aliyah' && (
+                    <>
+                      <Link to="/theory#exile" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <BookOpen size={16} className="mr-2" />
+                        <span>Solnit: Walking & Exile</span>
+                      </Link>
+                      <Link to="/theory#psychogeography" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <Map size={16} className="mr-2" />
+                        <span>Debord: Psychogeography</span>
+                      </Link>
+                      <Link to="/theory#tactics" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <ScrollText size={16} className="mr-2" />
+                        <span>de Certeau: Tactics</span>
+                      </Link>
+                    </>
+                  )}
+                  {card.slug === 'salt' && (
+                    <>
+                      <Link to="/theory#exile" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <BookOpen size={16} className="mr-2" />
+                        <span>Solnit: Walking & Exile</span>
+                      </Link>
+                      <Link to="/theory#psychogeography" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <Map size={16} className="mr-2" />
+                        <span>Debord: Psychogeography</span>
+                      </Link>
+                      <Link to="/theory#tactics" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <ScrollText size={16} className="mr-2" />
+                        <span>de Certeau: Tactics</span>
+                      </Link>
+                    </>
+                  )}
+                  {card.slug === 'birmingham' && (
+                    <>
+                      <Link to="/theory#psychogeography" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <Map size={16} className="mr-2" />
+                        <span>Debord: Psychogeography</span>
+                      </Link>
+                      <Link to="/theory#tactics" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <ScrollText size={16} className="mr-2" />
+                        <span>de Certeau: Tactics</span>
+                      </Link>
+                    </>
+                  )}
+                  {card.slug === 'paris' && (
+                    <>
+                      <Link to="/theory#psychogeography" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <Map size={16} className="mr-2" />
+                        <span>Debord: Psychogeography</span>
+                      </Link>
+                      <Link to="/theory#tactics" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <ScrollText size={16} className="mr-2" />
+                        <span>de Certeau: Tactics</span>
+                      </Link>
+                    </>
+                  )}
+                  {card.slug === 'rainyday' && (
+                    <>
+                      <Link to="/theory#psychogeography" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <Map size={16} className="mr-2" />
+                        <span>Debord: Psychogeography</span>
+                      </Link>
+                      <Link to="/theory#tactics" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <ScrollText size={16} className="mr-2" />
+                        <span>de Certeau: Tactics</span>
+                      </Link>
+                    </>
+                  )}
+                  {card.slug === 'poe' && (
+                    <>
+                      <Link to="/theory#tactics" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <ScrollText size={16} className="mr-2" />
+                        <span>de Certeau: Tactics</span>
+                      </Link>
+                    </>
+                  )}
+                  {card.slug === 'shabbat' && (
+                    <>
+                      <Link to="/theory#exile" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <BookOpen size={16} className="mr-2" />
+                        <span>Solnit: Walking & Exile</span>
+                      </Link>
+                      <Link to="/theory#rousseau" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <BookOpen size={16} className="mr-2" />
+                        <span>Rousseau: Walker's Paradox</span>
+                      </Link>
+                      <Link to="/theory#ammons" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <BookOpen size={16} className="mr-2" />
+                        <span>Ammons: Poem-Walk Poetics</span>
+                      </Link>
+                    </>
+                  )}
+                  {card.slug === 'letters' && (
+                    <>
+                      <Link to="/theory#exile" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <BookOpen size={16} className="mr-2" />
+                        <span>Solnit: Walking & Exile</span>
+                      </Link>
+                      <Link to="/theory#clark" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <BookOpen size={16} className="mr-2" />
+                        <span>Clark: Footstep as Stanza</span>
+                      </Link>
+                      <Link to="/theory#horowitz" className="flex items-center text-[#1c2340] hover:text-[#cba95b] transition-colors">
+                        <BookOpen size={16} className="mr-2" />
+                        <span>Horowitz: Attentive Walking</span>
+                      </Link>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
@@ -179,7 +306,7 @@ const CardPage: React.FC = () => {
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
                             <strong>Primary sources used:</strong> Torah commands for the
-                            thrice‑yearly festivals (Ex 23 &amp; Dt 16) and Psalms 120‑134, the
+                            thrice‑yearly festivals (Ex 23 &amp; Dt 16) and Psalms 120‑134, the
                             “Songs of Ascents” historically sung while climbing.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
@@ -207,7 +334,7 @@ const CardPage: React.FC = () => {
                             <strong>Why this scene?</strong> I wanted to connect the embodied protest of Gandhi’s Salt March with the ritual salt on the Passover table, foregrounding how small grains can catalyze sweeping change.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Primary sources used:</strong> Gandhi’s own Salt March journals, Leviticus 2:13’s “salt of the covenant,” and Exodus 12–14’s liberation narrative.
+                            <strong>Primary sources used:</strong> Gandhi’s own Salt March journals, Leviticus 2:13’s “salt of the covenant,” and Exodus 12–14’s liberation narrative.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
                             <strong>Theoretical frame:</strong> Rebecca Solnit’s idea of protest as punctuation in history, de Certeau’s “tactics” versus “strategy,” and Debord’s ambiance shift in revolutionary spaces.
@@ -227,7 +354,7 @@ const CardPage: React.FC = () => {
                             <strong>Why this scene?</strong> I wanted to trace the footsteps from King’s Birmingham Jail letter through Selma to contemporary protests, showing how the act of walking becomes a moral argument.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Primary sources used:</strong> Dr. King’s “Letter from Birmingham Jail,” Deuteronomy 16:20 (“Justice, justice shall you pursue”), and Amos 5:24’s call for justice to “roll down like waters.”
+                            <strong>Primary sources used:</strong> Dr. King’s “Letter from Birmingham Jail,” Deuteronomy 16:20 (“Justice, justice shall you pursue”), and Amos 5:24’s call for justice to “roll down like waters.”
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
                             <strong>Theoretical frame:</strong> Thoreau’s “Civil Disobedience,” Solnit’s walking as witness, and de Certeau and Debord’s concepts of moral mapping in urban space.
@@ -247,7 +374,7 @@ const CardPage: React.FC = () => {
                             <strong>Why this scene?</strong> I aimed to immerse the reader in the layered Jewish life of Paris’s Marais, from Dreyfus to the present, revealing how walking the same streets can mean safety or peril depending on the era.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Primary sources used:</strong> Newspaper coverage of the Dreyfus Affair, Vel d’Hiv roundup testimonies, and Rue des Rosiers walking guides.
+                            <strong>Primary sources used:</strong> Newspaper coverage of the Dreyfus Affair, Vel d’Hiv roundup testimonies, and Rue des Rosiers walking guides.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
                             <strong>Theoretical frame:</strong> de Certeau’s “pedestrian guerrilla” and Debord’s “Naked City” maps, showing how urban walking can resist or reveal power.
@@ -287,16 +414,56 @@ const CardPage: React.FC = () => {
                             <strong>Why this scene?</strong> I wanted to evoke how rain transforms memory in the old Jewish quarter, blurring the boundaries between past and present, inside and outside.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Primary sources used:</strong> Haussmann’s Paris renovation blueprints, Caillebotte’s “Paris Street; Rainy Day,” and archival records from Rue des Écouffes.
+                            <strong>Primary sources used:</strong> Haussmann's Paris renovation blueprints, Caillebotte's "Paris Street; Rainy Day," and archival records from Rue des Écouffes.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Theoretical frame:</strong> de Certeau’s “staining” tactic—how weather marks space—and Debord’s “Naked City” sensory nodes.
+                            <strong>Theoretical frame:</strong> de Certeau's "staining" tactic—how weather marks space—and Debord's "Naked City" sensory nodes.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
                             <strong>Visual logic:</strong> The before/after slider overlays ghetto lanes with modern boulevards, while the rain motif links loss and renewal.
                           </p>
                           <p className="text-sm text-gray-700">
                             <strong>Take-away:</strong> The card uses rainwater as a medium for resurrecting erased Jewish memories, suggesting that sensory experience is itself a form of cultural survival.
+                          </p>
+                        </>
+                      )}
+                      {card.slug === 'shabbat' && (
+                        <>
+                          <h4 className="text-sm font-semibold mb-2">Making Of – Shabbat Stride</h4>
+                          <p className="text-sm text-gray-700 mb-2">
+                            <strong>Why this scene?</strong> I wanted to explore how the simple walk to synagogue reconfigures ordinary streets into sacred passageways, echoing course discussions of walking as spiritual practice.
+                          </p>
+                          <p className="text-sm text-gray-700 mb-2">
+                            <strong>Primary sources used:</strong> Exodus 16:29, contemporary Jewish legal texts on techum Shabbat, Rousseau's Reveries, Thoreau's Walking, Ammons's A Poem is a Walk.
+                          </p>
+                          <p className="text-sm text-gray-700 mb-2">
+                            <strong>Theoretical frame:</strong> The card considers ritual walking through the lens of poetic and philosophical reflection, drawing parallels to Rousseau's inner journeys and Ammons's embodied thought.
+                          </p>
+                          <p className="text-sm text-gray-700 mb-2">
+                            <strong>Visual logic:</strong> The map-based scroll visualizes communal boundaries, making spatial what is often legal or spiritual. Circles, not lines, organize this walk.
+                          </p>
+                          <p className="text-sm text-gray-700">
+                            <strong>Take-away:</strong> The Shabbat walk reminds us that slowing down is not a retreat, but a choice to reinhabit space and time more deliberately—to walk, as Ammons might say, not to arrive, but to awaken.
+                          </p>
+                        </>
+                      )}
+                      {card.slug === 'letters' && (
+                        <>
+                          <h4 className="text-sm font-semibold mb-2">Making Of – Letters on the Road</h4>
+                          <p className="text-sm text-gray-700 mb-2">
+                            <strong>Why this scene?</strong> I wanted to explore how walking with a letter can serve as a modern echo of ancient pilgrimage, transforming city streets into sacred routes.
+                          </p>
+                          <p className="text-sm text-gray-700 mb-2">
+                            <strong>Primary sources used:</strong> Deuteronomy 16:16, Psalms of Ascent (120-134), Talmudic references to aliyah l'regel, Bunyan's The Pilgrim's Progress, Clark's In Praise of Walking, Horowitz's On Looking.
+                          </p>
+                          <p className="text-sm text-gray-700 mb-2">
+                            <strong>Theoretical frame:</strong> This card reads pilgrimage as literary and embodied practice, connecting the act of walking to prayer, letter-writing, and devotional ascent.
+                          </p>
+                          <p className="text-sm text-gray-700 mb-2">
+                            <strong>Visual logic:</strong> The scrollable map creates a sense of elevation, mimicking both the literal and spiritual ascent to Jerusalem.
+                          </p>
+                          <p className="text-sm text-gray-700">
+                            <strong>Take-away:</strong> Pilgrimage need not span continents. Even a short walk, when paired with intention and text, can lift the walker upward—letter by letter, step by step.
                           </p>
                         </>
                       )}

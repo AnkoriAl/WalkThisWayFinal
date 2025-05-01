@@ -9,11 +9,15 @@ const WorksCitedPage: React.FC = () => {
     },
     {
       id: 'torah',
-      citation: "Torah. Genesis 12:1, Exodus 14."
+      citation: "Torah. Genesis 12:1, Exodus 14, Exodus 16:29, Deuteronomy 16:16."
     },
     {
       id: 'king',
       citation: "King, Martin Luther Jr. 'Letter from Birmingham Jail.' 1963."
+    },
+    {
+      id: 'psalms',
+      citation: "Psalms of Ascent (Psalms 120-134)."
     }
   ];
   
@@ -40,6 +44,26 @@ const WorksCitedPage: React.FC = () => {
     {
       id: 'elkin',
       citation: "Elkin, Lauren. Flâneuse: Women Walk the City. Farrar, Straus and Giroux, 2017."
+    },
+    {
+      id: 'rousseau',
+      citation: "Rousseau, Jean-Jacques. Reveries of a Solitary Walker. 1782."
+    },
+    {
+      id: 'thoreau',
+      citation: "Thoreau, Henry David. Walking. 1862."
+    },
+    {
+      id: 'ammons',
+      citation: "Ammons, A.R. A Poem is a Walk. Ecco Press, 1981."
+    },
+    {
+      id: 'clark',
+      citation: "Clark, Thomas A. In Praise of Walking. Carcanet Press, 2015."
+    },
+    {
+      id: 'horowitz',
+      citation: "Horowitz, Alexandra. On Looking: A Walker's Guide to the Art of Observation. Scribner, 2013."
     }
   ];
   
