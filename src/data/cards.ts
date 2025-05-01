@@ -108,17 +108,17 @@ export const cards: Card[] = [
   },
   {
     slug: 'letters',
-    title: 'Letters on the Road',
+    title: 'Chronicle in Footprints',
     emoji: '📜',
-    diaryText: `[Overview] Each year, thousands of Jews around the world walk to the Western Wall to place handwritten prayers between its stones. These letters—folded fragments of longing—are carried by foot, in pockets and palms, across Jerusalem's cobbled corridors. The act is physical and devotional: every step deepens the plea. While the note is deposited in silence, the walk is a conversation. It is a pilgrimage in miniature, echoing the ancient Israelites who ascended to Jerusalem three times a year (aliyah l'regel) on foot.
+    diaryText: `[Overview] Imagine retracing your morning commute armed not with thoughts but with a camera, a voice recorder, and a notebook. Each step is catalogued: a photo of a cracked sidewalk, a shaky handheld video of neon reflections in puddles, a hurried voice note on the cyclist who nearly clipped you. By day’s end, the map you walked becomes a layered dossier—footprints frozen in pixels, sound bites, and prose.
 
-[Jewish Parallel] In Jewish tradition, the walk to Jerusalem is itself a mitzvah. Deuteronomy 16:16 commands: "Three times a year shall all your males appear before the Lord your God in the place that He shall choose." The Talmud expands on this, narrating the communal rhythm of festival walking. The modern trek to the Kotel, letter in hand, renews this commandment in a quiet, personal key. Like the Psalms of Ascent (Psalms 120-134), the journey is as much inward as uphill.
+[Jewish Thread] In Biblical lore, Cain’s mark preserved his story on the world’s pathways, a testament to exile and survival. Centuries later, the Wandering Jew legend speaks to perpetual displacement—an unending pilgrimage marked by every recorded footstep. Their stories remind us that exile, once documented, transforms from erasure into enduring witness.
 
-[Bringing Traditions Together] In our course, we explored pilgrimage as both destination and transformation. Bunyan's Pilgrim's Progress offers a Christian allegory of moral striving, but Jewish pilgrimage, too, charts an ethical geography. Walking with a note is not merely travel; it is testimony—a claim that presence matters. As with the psychogeographers of modern London or the Situationists' dérive, intention guides route. But here the aim is not to get lost, but to be found.
+[Documented Walk as Text] Richard Long’s grass line births a living drawing later memorialized on film. Bruce Nauman’s video of him pacing a square’s edge turns repetition into taut choreography—each lap a frame in his own chronicle. Jane Cardiff’s Her Long Black Hair drapes a walkway with braided hair, weaving personal narrative into the riverbank’s stones. And Solnit’s Las Vegas dérive, shot through with neon and chance, shows how documenting detours writes new city myths.
 
-[Theory] As Thomas A. Clark writes in "In Praise of Walking," each footstep writes its own poem. The note-walk to the Wall materializes this verse: a physical text carried toward a textual wall. Horowitz's On Looking teaches us that city walking can become sacred through attentiveness. To carry a letter through Jerusalem is to walk through centuries of devotion—layered stone, prayer callouses, dust and hope. Each step is a stanza.`,
+[Take-away] Whether by myth or camera, the act of recording anchors fleeting movement to memory. Documentation rescues the ephemeral walk from oblivion, turning each step into a stanza of a larger text. In tracing and testifying, we claim presence—and inscribe exile, discovery, and wonder onto the world.`,
     interactiveType: 'scroller',
-    visualHook: 'https://s.france24.com/media/display/748516f4-1c3d-11f0-885a-005056a97e36/w:1280/p:16x9/00cd5547436274618a7689d11003e07234534ac7.jpg',
+    visualHook: 'https://media.swncdn.com/via/10491-footprints-in-sand-along-surf-edge-gettyimage.jpg',
     visualDescription: 'A traveler approaches the Western Wall, carrying a handwritten prayer.',
   },
 ];

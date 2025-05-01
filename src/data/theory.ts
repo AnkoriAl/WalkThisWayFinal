@@ -77,6 +77,21 @@ Course connection. Week 10 pairs Baudelaire with Solnit's "Solitary Stroller & t
     id: 'horowitz',
     title: 'Horowitz — Attentive Walking',
     content: `In On Looking: A Walker's Guide to the Art of Observation (2013), Alexandra Horowitz proposes that walking, when approached with heightened attentiveness, reveals multiple hidden layers of reality. Through a series of experiments in which she traverses the same city block repeatedly, each time guided by a different expert—a geologist, an artist, a physician, even a dog—Horowitz demonstrates how every walk is uniquely defined by the lens through which one observes. Walking, therefore, is not a passive activity but a disciplined form of observation that can uncover multiple, overlapping worlds in a single landscape. This "multiply-attentive" approach transforms ordinary environments into sites of discovery and revelation. Applied to the act of Jewish pilgrimage, such as carrying personal prayers through Jerusalem's streets to place them between the stones of the Western Wall, Horowitz's insights illuminate the depth of meaning possible in even familiar walks. Pilgrims engage simultaneously with archaeological remnants, sacred historical layers, and the vibrant immediacy of contemporary Jerusalem. Every step taken becomes an exercise in mindfulness, memory, and spiritual awareness. Rather than merely traversing a space, the pilgrim-walker performs a form of embodied reading, decoding multiple narratives from the textures, sounds, and sights encountered along the way.`
+  },
+  {
+    id: 'solnit-vegas',
+    title: 'Las Vegas Dérive: Solnit\'s Neon Narrative',
+    content: `Rebecca Solnit turns the Strip into a living text. In Wanderlust (pp. 277–291), she slips past the bright façades and back into shadowed alleys, treating every marquee and empty lot as a sentence break in Las Vegas's grand story. The dancing fountains become commas of spectacle; rusted motel signs, ellipses of neglect. Solnit's walk isn't random—it's a feminist dérive, noticing who is invited into the glare and who is left in the dark. She punctuates the cityscape with memoir beats, weaving her own past into the desert's collective memory. For her, walking is literary: each step edits the next line, turning neon detours into revelations about desire, abandonment, and resilience.`
+  },
+  {
+    id: 'certeau-sidewalk',
+    title: 'Sidewalk Scripts: de Certeau\'s Pedestrian Poetics',
+    content: `Michel de Certeau treats every city block as a verse in an epic poem that only the walker writes. In "Walking in the City," he distinguishes grand "strategies" of planners and architects from the "tactics" of everyday foot traffic. A hurried shortcut, a whispered name-change of a plaza, even a casual linger on a stoop—all are stanzas in the pavement's secret script. De Certeau's pedestrians are guerrilla poets, embedding personal meaning in the cracks and corners that official maps ignore. Their footsteps ink invisible annotations on the urban grid, proving that power lives not only in towers but also in every uncharted detour.`
+  },
+  {
+    id: 'debord-compass',
+    title: 'Compass of Disobedience: Debord\'s Psychogeographic Pilgrimage',
+    content: `Guy Debord's psychogeography marries emotion and urban form. With the dérive, he urges us to abandon our habitual routes and let the city's "psychic islands" guide us: a flicker of neon, a sudden breeze through a forgotten courtyard. His map isn't streets but moods—charting ambiences rather than avenues. Key moves include disorientation (lose your usual bearings), ambience snaps (one block's joy versus the next block's dread), and time compression (an hour's walk collapsing weeks of feeling). Debord empowers the walker as human seismograph—detecting the city's hidden tremors. In psychogeography, every step becomes a compass bearing for subversion, exposing the emotional topography beneath official cartography.`
   }
 ];
 
