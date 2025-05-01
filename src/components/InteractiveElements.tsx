@@ -241,6 +241,39 @@ map: {
       }
     ]
   },
+  /* 8 ▸ CHRONICLE WALK — Old City layers */
+  chronicle: {
+    sections: [
+      {
+        id: 1,
+        title: 'Damascus Gate — 1st Century BCE',
+        bg: 'https://cbnisrael.org/wp-content/uploads/2021/07/2021-07-27-Damascus-Gate-Marc-Turnage.jpg',
+        text: 'You walk beneath towering stones. Roman soldiers once passed here, and Jewish pilgrims climbed toward the Temple with offerings in hand.',
+        reflect: 'Pause & Reflect — These same stairs may have felt your ancestors’ footsteps.'
+      },
+      {
+        id: 2,
+        title: 'Holy Sepulchre — Crusader Era',
+        bg: 'https://www.catholicnewsagency.com/images/holysep.jpeg?w=670&h=447',
+        text: 'Turning into a narrow street, you hear bells echo. The Crusaders once marched this road, claiming it holy with blade and banner.',
+        reflect: 'Pause & Reflect — A Latin knight carved his name into this wall. It’s still there.'
+      },
+      {
+        id: 3,
+        title: 'Cotton Market — Ottoman Jerusalem',
+        bg: 'https://alqudsjerusalem.com/wp-content/uploads/qattanin-3.jpg',
+        text: 'Spices thicken the air. You pass shopkeepers calling in Arabic and Turkish. The Ottomans ruled this street for 400 years—and left their tiles behind.',
+        reflect: 'Pause & Reflect — The same family has sold fabric here for eight generations.'
+      },
+      {
+        id: 4,
+        title: 'Zion Gate — British Mandate 1947',
+        bg: 'https://historicalsitesinisrael.com/wp-content/uploads/2022/12/Snapshot_1-13.png',
+        text: 'You step toward Zion Gate as dusk falls. A British patrol once stood here. Now, Hebrew, Arabic, and English signs compete on the stone walls.',
+        reflect: 'Pause & Reflect — History doesn’t end—it layers beneath your feet.'
+      }
+    ]
+  },
 };
 
 /** ---------- Helper Components ---------- */
@@ -582,6 +615,36 @@ const renderMap = () => {
     );
   };
 
+  /** CHRONICLE WALK ---------------------------------------------------- */
+  const ChronicleWalk: React.FC = () => {
+    const { sections } = ASSETS.chronicle;
+    return (
+      <section className="bg-[#f6f0e6] p-0 rounded-lg overflow-hidden border border-[#cba95b]">
+        {sections.map((s, i) => (
+          <div
+            key={s.id}
+            className="h-[22rem] flex flex-col justify-end px-6 py-8 text-white"
+            style={{
+              backgroundImage: `url(${s.bg})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          >
+            <h3 className="text-2xl font-semibold drop-shadow-lg mb-2">
+              {s.title}
+            </h3>
+            <p className="text-sm drop-shadow leading-relaxed mb-4">
+              {s.text}
+            </p>
+            <p className="text-xs bg-black/60 inline-block px-3 py-2 rounded">
+              {s.reflect}
+            </p>
+          </div>
+        ))}
+      </section>
+    );
+  };
+
   /** CCTV --------------------------------------------------------------- */
   const CCTV: React.FC = () => {
     const { video } = ASSETS.cctv;
@@ -778,6 +841,7 @@ const renderMap = () => {
 
   /** SWITCH ------------------------------------------------------------- */
   const getContent = () => {
+    if (slug === 'chronicle' || type === 'letters') return <ChronicleWalk />;
     if (slug === 'shabbat') return <ShabbatSensory />;
     switch (type) {
       case 'map':

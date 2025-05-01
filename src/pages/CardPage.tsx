@@ -37,6 +37,9 @@ const CardPage: React.FC = () => {
     if (card.slug === 'shabbat') {
       return <VirtualWalk />;
     }
+    if (card.slug === 'letters') {
+      return <InteractiveElement type="letters" slug={card.slug} />;
+    }
     return <InteractiveElement type={card.interactiveType} slug={card.slug} />;
   };
   
@@ -279,9 +282,7 @@ const CardPage: React.FC = () => {
                 data-aos="fade-up"
                 data-aos-delay="600"
               >
-                {card.slug !== 'letters' && (
-                  <InteractiveElement type={card.interactiveType} slug={card.slug} />
-                )}
+                {renderInteractiveElement()}
               </div>
               
               <div className="flex justify-between items-center mt-12">
@@ -489,10 +490,10 @@ const CardPage: React.FC = () => {
                             <strong>Why this scene?</strong> I chose a shoreline strewn with footprints to capture the tension between permanence and erasure. Each print marks a step taken, yet the next tide threatens to sweep it away—just as our documented walks preserve moments that might otherwise vanish.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Primary sources used:</strong> Biblical exile narratives (Cain’s mark, the Wandering Jew), Rebecca Solnit’s reflections on memory in motion, Bruce Nauman’s looping performances, and Michel de Certeau’s tactics of everyday walking.
+                            <strong>Primary sources used:</strong> Biblical exile narratives (Cain's mark, the Wandering Jew), Rebecca Solnit's reflections on memory in motion, Bruce Nauman's looping performances, and Michel de Certeau's tactics of everyday walking.
                           </p>
                           <p className="text-sm text-gray-700 mb-2">
-                            <strong>Theoretical frame:</strong> This card reads walking as both record and ritual. Debord’s psychogeographic dérive meets de Certeau’s tactical detour: every footprint is a micro-action that inscribes personal history onto a shifting landscape.
+                            <strong>Theoretical frame:</strong> This card reads walking as both record and ritual. Debord's psychogeographic dérive meets de Certeau's tactical detour: every footprint is a micro-action that inscribes personal history onto a shifting landscape.
                           </p>
                           <p className="text-sm text-gray-700">
                             <strong>Take-away:</strong> Even transient steps leave a story. By documenting each print—photo, audio, note—we push back against oblivion and turn fleeting journeys into lasting testimonies.
