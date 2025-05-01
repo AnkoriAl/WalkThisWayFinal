@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { cards } from '../data/cards';
 import InteractiveElement from '../components/InteractiveElements';
+import VirtualWalk from '../components/VirtualWalk';
 import Citation from '../components/Citation';
 import { ChevronLeft, ChevronRight, BookOpen, Map, ScrollText, ChevronDown } from 'lucide-react';
 
@@ -29,6 +30,14 @@ const CardPage: React.FC = () => {
     setIsLoading(true);
     // Use navigate instead of Link to have more control over the transition
     navigate(`/card/${newSlug}`);
+  };
+  
+  const renderInteractiveElement = () => {
+    if (!card) return null;
+    if (card.slug === 'shabbat') {
+      return <VirtualWalk />;
+    }
+    return <InteractiveElement type={card.interactiveType} slug={card.slug} />;
   };
   
   if (!card) {
@@ -266,11 +275,8 @@ const CardPage: React.FC = () => {
                 </p>
               </div>
               
-              <div 
-                data-aos="fade-up"
-                data-aos-delay="600"
-              >
-                <InteractiveElement type={card.interactiveType} slug={card.slug} />
+              <div className="mb-16">
+                {renderInteractiveElement()}
               </div>
               
               <div className="flex justify-between items-center mt-12">
