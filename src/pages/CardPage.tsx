@@ -35,7 +35,7 @@ const CardPage: React.FC = () => {
   const renderInteractiveElement = () => {
     if (!card) return null;
     if (card.slug === 'shabbat') {
-      return <VirtualWalk />;
+      return <InteractiveElement type="shabbat" slug={card.slug}/>;
     }
     if (card.slug === 'letters') {
       return <InteractiveElement type="letters" slug={card.slug} />;
