@@ -188,7 +188,59 @@ map: {
       'https://upload.wikimedia.org/wikipedia/commons/f/f2/1802_Chez_Jean_Map_of_Paris_in_12_Municipalities%2C_France_-_Geographicus_-_Paris-jean-1802.jpg',
     labelBefore: "1877 — Caillebotte’s Rainy Day: polished boulevards and umbrellas.",
     labelAfter:  "1802 — Pre-Haussmann map of Paris’s medieval Jewish quarter."
-  }
+  },
+
+  /* 7 ▸ SHABBAT SENSORY JOURNEY */
+  shabbat: {
+    background:
+      'https://images.stockcake.com/public/1/4/2/14290adf-ef33-4fa3-b48c-745bcaa94622_large/sunset-over-suburb-stockcake.jpg',
+    sceneDescription:
+      'You find yourself looking down a gently curved residential street, bathed in the warm, golden glow of a late Friday afternoon. The sky deepens to twilight as windows flicker with candle‑light, and purposeful yet unhurried figures head toward synagogue.',
+    spots: [
+      {
+        x: '22%',
+        y: '48%',
+        text:
+          '🥖 Fresh Challah Aroma — Warm, golden loaves scent the street, wrapping passers‑by in continuity and comfort. *“Every Friday, the scent of braided loaves mingles with whispered blessings. Challah is sustenance and memory in one.”*',
+        img: 'https://media.istockphoto.com/id/652722218/photo/enjoying-the-smell-of-the-fresh-hot-bread.jpg?s=612x612&w=0&k=20&c=5qJUhM5tiCEDXtGKmPVX0MvD4v5uZR0G2iikoYgnro4='
+      },
+      {
+        x: '65%',
+        y: '40%',
+        text:
+          '🎶 Distant Shalom Aleichem — Soft hymn rises from an open window, threading through the air and gathering scattered souls into one chorus.',
+        img: 'https://i0.wp.com/jamesjackson.blog/wp-content/uploads/2024/03/img_1831-1.jpg?fit=1000%2C667&ssl=1'
+      },
+      {
+        x: '35%',
+        y: '30%',
+        text:
+          '🍃 Cool Evening Breeze — A gentle wind brushes skin, carrying jasmine and freshly‑cut grass, inviting walkers to breathe deeply and slow down.',
+        img: 'https://images.stockcake.com/public/3/1/5/31514f4e-7e8e-4a4f-8b27-1756a909e2d5_large/autumn-leaves-falling-stockcake.jpg'
+      },
+      {
+        x: '52%',
+        y: '55%',
+        text:
+          '🕯️ Candlelight Glow — Honey‑colored flames flicker behind curtains, turning every room into a sanctuary and every table into sacred space.',
+        img: 'https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/stock%2FGettyImages-1189691583'
+      },
+      {
+        x: '78%',
+        y: '25%',
+        text:
+          '🌌 First Stars — Tiny lights pierce the indigo sky, echoing promises to Abraham and marking the world’s slide into sacred time.',
+        img: 'https://freerangestock.com/sample/96542/black-sky-with-few-stars.jpg'
+      },
+      {
+        x: '48%',
+        y: '70%',
+        text:
+          '🤝 Quiet Greetings — Neighbours exchange hushed blessings, stitching individual paths into a shared fabric of community.',
+        img: 'https://images.pond5.com/shady-handshake-between-two-businessmen-footage-208726936_iconl.jpeg'
+      }
+    ]
+  },
 };
 
 /** ---------- Helper Components ---------- */
@@ -472,6 +524,64 @@ const renderMap = () => {
     );
   };
 
+  /** SHABBAT SENSORY JOURNEY ------------------------------------------ */
+  const ShabbatSensory: React.FC = () => {
+    const { background, spots, sceneDescription } = ASSETS.shabbat;
+    const [active, setActive] = useState<number | null>(null);
+
+    return (
+      <section className="bg-[#f6f0e6] p-6 rounded-lg border border-[#cba95b]">
+        <header className="flex justify-between items-center mb-4">
+          <h3 className="text-xl font-semibold">Shabbat Sensory Journey</h3>
+          <Icon type="hotspots" />
+        </header>
+
+        <p className="mb-4 text-sm text-gray-700">{sceneDescription}</p>
+
+        <div
+          className="relative h-80 bg-cover bg-center rounded overflow-hidden"
+          style={{ backgroundImage: `url(${background})` }}
+        >
+          {spots.map((s, i) => (
+            <button
+              key={i}
+              style={{ left: s.x, top: s.y }}
+              onClick={() => setActive(i)}
+              className="absolute w-8 h-8 rounded-full bg-[#cba95b] bg-opacity-60 hover:bg-opacity-90
+                         -translate-x-1/2 -translate-y-1/2"
+            >
+              <span className="block w-full h-full rounded-full border-2 border-white animate-ping opacity-50"></span>
+            </button>
+          ))}
+
+          {active !== null && (
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60">
+              <div className="bg-white rounded p-4 max-w-sm relative">
+                <button
+                  onClick={() => setActive(null)}
+                  className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
+                  aria-label="Close"
+                >
+                  <X size={16} />
+                </button>
+                <img
+                  src={spots[active].img}
+                  alt="Shabbat sensory illustration"
+                  className="rounded mb-2 max-h-52 object-cover"
+                />
+                <p className="text-sm whitespace-pre-wrap">{spots[active].text}</p>
+              </div>
+            </div>
+          )}
+        </div>
+
+        <p className="mt-4 text-sm text-gray-600">
+          Click the glowing spots to explore the senses of a Shabbat walk.
+        </p>
+      </section>
+    );
+  };
+
   /** CCTV --------------------------------------------------------------- */
   const CCTV: React.FC = () => {
     const { video } = ASSETS.cctv;
@@ -668,6 +778,7 @@ const renderMap = () => {
 
   /** SWITCH ------------------------------------------------------------- */
   const getContent = () => {
+    if (slug === 'shabbat') return <ShabbatSensory />;
     switch (type) {
       case 'map':
         return renderMap();
