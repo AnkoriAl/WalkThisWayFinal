@@ -111,42 +111,11 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
         
-        {/* Process gallery */}
-        <div className="mb-16">
-          <h2 
-            className="text-2xl font-bold mb-6 text-[#1c2340] text-center"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
-            Process Gallery
-          </h2>
-          
-          <div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div key={item} className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="aspect-video bg-gray-100 flex items-center justify-center">
-                  <p className="text-gray-400">Process image {item}</p>
-                </div>
-                <div className="p-4">
-                  <p className="text-sm text-gray-600">
-                    {item % 2 === 0 ? 'Early wireframe sketch showing card layout and interaction points.' : 
-                     'Moodboard exploring visual themes of walking, exile, and Jewish history.'}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        
         {/* CTA */}
         <div 
           className="text-center"
           data-aos="fade-up"
-          data-aos-delay="700"
+          data-aos-delay="500"
         >
           <a 
             href="#" 
